@@ -8,6 +8,7 @@ import TransitionPage from "@/pages/TransitionPage";
 import MemoriesPage from "@/pages/MemoriesPage";
 import SurprisePage from "@/pages/SurprisePage";
 import LoveLetterPage from "@/pages/LoveLetterPage";
+import BirthdayHeartPage from "@/pages/BirthdayHeartPage";
 import EndingPage from "@/pages/EndingPage";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ type Stage =
   | "memories"
   | "surprise"
   | "letter"
+  | "birthday"
   | "ending";
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const audio = new Audio(`${import.meta.env.BASE_URL}background-music.mpeg`);
+    const audio = new Audio(`${import.meta.env.BASE_URL}love.mpeg`);
     audio.loop = true;
     audio.volume = 0.35;
     audio.preload = "auto";
@@ -144,7 +146,10 @@ function App() {
             <SurprisePage onContinue={() => goTo("letter")} />
           )}
           {stage === "letter" && (
-            <LoveLetterPage onContinue={() => goTo("ending")} />
+            <LoveLetterPage onContinue={() => goTo("birthday")} />
+          )}
+          {stage === "birthday" && (
+            <BirthdayHeartPage onReplay={() => goTo("landing")} />
           )}
           {stage === "ending" && (
             <EndingPage onReplay={() => goTo("landing")} />

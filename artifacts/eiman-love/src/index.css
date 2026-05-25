@@ -328,6 +328,16 @@
   50% { transform: scale(1) rotate(180deg); opacity: 1; }
 }
 
+@keyframes birthdayGalaxySpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes birthdayParticleGlow {
+  0%, 100% { opacity: 0.55; box-shadow: 0 0 6px rgba(255,255,255,0.75); }
+  50% { opacity: 1; box-shadow: 0 0 12px rgba(255,160,210,0.95); }
+}
+
 .animate-float-up { animation: floatUp linear infinite; }
 .animate-pulse-heart { animation: pulse-heart 1.5s ease-in-out infinite; }
 .animate-shimmer { animation: shimmer 3s linear infinite; }
@@ -400,6 +410,36 @@
   font-size: 1.5rem;
   animation: floatUp linear infinite;
   opacity: 0;
+}
+
+.birthday-particle-field {
+  display: grid;
+  place-items: center;
+  max-width: 78vw;
+  max-height: 48vh;
+}
+
+.birthday-particle-field.is-galaxy {
+  animation: birthdayGalaxySpin 2s ease-in-out forwards;
+}
+
+.birthday-particle {
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 8px rgba(255,255,255,0.85);
+  transition:
+    transform 1.9s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 1.6s ease,
+    box-shadow 1.6s ease,
+    opacity 0.8s ease;
+  animation: birthdayParticleGlow 1.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.birthday-particle-field.is-heart .birthday-particle {
+  background: rgba(255,126,190,0.98);
+  box-shadow: 0 0 12px rgba(255,105,180,0.9), 0 0 24px rgba(255,105,180,0.35);
 }
 
 /* Hello Kitty SVG styles */

@@ -58,7 +58,7 @@ export default function SurprisePage({ onContinue }: SurprisePageProps) {
                     fontSize: "clamp(1.1rem, 5vw, 1.4rem)",
                   }}
                 >
-                  راما…
+                  لورا
                 </p>
                 <p
                   className="text-pink-200/90 mb-4"
@@ -69,13 +69,13 @@ export default function SurprisePage({ onContinue }: SurprisePageProps) {
                 >
                   في زر هان
                   <br />
-                  بس لا تضغطي عليه! 😅
+                  بس لا تضغطي عليه 😅
                 </p>
 
                 <div className="flex items-center justify-center gap-3 my-4">
                   <span className="text-2xl animate-star-twinkle" style={{ animationDuration: "1.5s" }}>⚠️</span>
                   <p className="text-yellow-200/70 text-sm" style={{ fontFamily: "'Noto Naskh Arabic', sans-serif" }}>
-                    ما قلتلك تضغطي وينه!
+                    ما قلتلك تضغطي وينه
                   </p>
                   <span className="text-2xl animate-star-twinkle" style={{ animationDuration: "2s", animationDelay: "0.5s" }}>⚠️</span>
                 </div>
@@ -94,7 +94,7 @@ export default function SurprisePage({ onContinue }: SurprisePageProps) {
                 className="text-pink-300/40 text-xs mt-3"
                 style={{ fontFamily: "'Noto Naskh Arabic', sans-serif" }}
               >
-                (بس اضغطي لو بدك تشوفي 👀)
+                بس اضغطي لو بدك تشوفي 👀
               </p>
             </div>
           )}
@@ -132,7 +132,7 @@ export default function SurprisePage({ onContinue }: SurprisePageProps) {
             className="text-white text-xl font-bold"
             style={{ fontFamily: "'Noto Naskh Arabic', sans-serif" }}
           >
-            شوفي شو صار! 😅❤️
+            شوفي شو صار 😅❤️
           </p>
 
           {showProceed && (

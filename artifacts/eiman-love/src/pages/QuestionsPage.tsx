@@ -5,17 +5,17 @@ import Ribbon from "@/components/Ribbon";
 const questions = [
   {
     id: 1,
-    text: "راما… تتذكري أول مرة حكينا فيها ",
+    text: "لورا تتذكري اول مرة حكينا فيها",
     emoji: "💬",
     choices: [
-      { emoji: "😅", text: "أكيد" },
+      { emoji: "😅", text: "اكيد" },
       { emoji: "🤔", text: "يمكن" },
-      { emoji: "😂", text: "لا، بس حسّيتها غير" },
+      { emoji: "😂", text: "لا بس حسيتها غير" },
     ],
   },
   {
     id: 2,
-    text: "وقتها… كنتي تتوقعي توصل علاقتنا لهدرجة؟",
+    text: "وقتها كنتي تتوقعي توصل علاقتنا لهدرجة",
     emoji: "🌙",
     choices: [
       { emoji: "😳", text: "لا " },
@@ -25,17 +25,17 @@ const questions = [
   },
   {
     id: 3,
-    text: "برايك مين فينا طاح أول؟",
+    text: "برايك مين فينا طاح اول",
     emoji: "💘",
     choices: [
       { emoji: "😏", text: "أنا" },
-      { emoji: "😌", text: "إنت" },
+      { emoji: "😌", text: "انت" },
       { emoji: "😂", text: "خلنا نقول كلنا" },
     ],
   },
   {
     id: 4,
-    text: "شو أكثر شي تحبيه فينا؟",
+    text: "شو اكثر شي تحبيه فينا",
     emoji: "💕",
     choices: [
       { emoji: "💬", text: "سوالفنا" },
@@ -45,7 +45,7 @@ const questions = [
   },
   {
     id: 5,
-    text: "لو حبنا كان مكان… وين تتخيليه؟",
+    text: "لو حبنا كان مكان وين تتخيليه",
     emoji: "🌌",
     choices: [
       { emoji: "🌊", text: "بحر هادي" },
@@ -55,12 +55,56 @@ const questions = [
   },
   {
     id: 6,
-    text: "بصراحة… أنا شو أمثّل الك؟",
+    text: "بصراحة انا شو امثل الك",
     emoji: "🫶",
     choices: [
       { emoji: "❤️", text: "كل شي" },
       { emoji: "💖", text: "كثير" },
       { emoji: "🫶", text: "شخص مهم كثير" },
+    ],
+  },
+  {
+    id: 7,
+    text: "سمعت انو اليوم عيد ميلادك صحيح",
+    emoji: "🎂",
+    correctIndex: 0,
+    choices: [
+      { emoji: "🎉", text: "اي اليوم يومي" },
+      { emoji: "🤭", text: "يمكن مين حكالك" },
+      { emoji: "🎁", text: "لا بس بدي هدية" },
+    ],
+  },
+  {
+    id: 8,
+    text: "مين احلى ام لول بالدنيا كلها",
+    emoji: "💞",
+    correctIndex: 2,
+    choices: [
+      { emoji: "💖", text: "لورا طبعا" },
+      { emoji: "💕", text: "لولو طبعا" },
+      { emoji: "🫶", text: "كل الاجابات صح" },
+    ],
+  },
+  {
+    id: 9,
+    text: "قديش بحبك",
+    emoji: "❤️",
+    correctIndex: 2,
+    choices: [
+      { emoji: "🌸", text: "شوي" },
+      { emoji: "💗", text: "كثير" },
+      { emoji: "💫", text: "اكثر من الكلام كله" },
+    ],
+  },
+  {
+    id: 10,
+    text: "شو بتضلي بالنسبة الي",
+    emoji: "🌙",
+    correctIndex: 2,
+    choices: [
+      { emoji: "✨", text: "صدفة حلوة" },
+      { emoji: "🥺", text: "نور عيوني" },
+      { emoji: "❤️", text: "كل حياتي" },
     ],
   },
 ];
@@ -137,7 +181,7 @@ export default function QuestionsPage({ onComplete }: QuestionsPageProps) {
     }, 800);
   };
 
-  const bowTypes: Array<"red" | "pink" | "purple"> = ["red", "pink", "purple", "red", "pink", "purple"];
+  const bowTypes: Array<"red" | "pink" | "purple"> = ["red", "pink", "purple", "red", "pink", "purple", "red", "pink", "purple", "red"];
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 py-8">
@@ -177,7 +221,7 @@ export default function QuestionsPage({ onComplete }: QuestionsPageProps) {
 
       {/* Question card */}
       <div
-        className={`glass-card glow-border rounded-3xl p-6 w-full max-w-md mb-6 transition-all duration-400 ${
+        className={`glass-card glow-border rounded-3xl p-5 sm:p-6 w-full max-w-md mb-6 transition-all duration-400 ${
           animating ? "opacity-0 scale-95 translate-y-4" : "opacity-100 scale-100 translate-y-0"
         }`}
       >
@@ -205,7 +249,7 @@ export default function QuestionsPage({ onComplete }: QuestionsPageProps) {
               key={idx}
               data-testid={`button-choice-${idx}`}
               onClick={() => handleChoice(idx)}
-              className={`choice-btn glass-card rounded-2xl py-3 px-5 flex items-center gap-3 border transition-all duration-300 ${
+              className={`choice-btn glass-card rounded-2xl py-3 px-4 sm:px-5 flex items-center gap-3 border transition-all duration-300 ${
                 selected === idx
                   ? "selected border-pink-400 bg-pink-500/20"
                   : "border-white/10 hover:border-pink-400/40"
@@ -213,7 +257,7 @@ export default function QuestionsPage({ onComplete }: QuestionsPageProps) {
             >
               <span className="text-2xl">{choice.emoji}</span>
               <span
-                className="text-white/90 font-medium flex-1 text-right"
+                className="text-white/90 font-medium flex-1 text-right leading-relaxed break-words"
                 style={{ fontFamily: "'Noto Naskh Arabic', sans-serif", fontSize: "clamp(0.9rem, 4vw, 1.1rem)" }}
               >
                 {choice.text}

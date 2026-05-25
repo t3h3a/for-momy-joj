@@ -52,7 +52,7 @@ export default function TransitionPage({ onContinue }: TransitionPageProps) {
               fontSize: "clamp(1.2rem, 5vw, 1.6rem)",
             }}
           >
-            طيب… خليني أحكيلك أنا شو حاس…
+            طيب خليني احكيلك انا شو حاس
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function TransitionPage({ onContinue }: TransitionPageProps) {
             className="text-white/70 text-sm"
             style={{ fontFamily: "'Noto Naskh Arabic', sans-serif" }}
           >
-            ✨ الذكريات تنتظرك… ✨
+            ✨ الذكريات بتستناك ✨
           </p>
         </div>
       </div>

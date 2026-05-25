@@ -78,7 +78,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
               textShadow: "0 0 40px rgba(255,105,180,0.5)",
             }}
           >
-            راما…
+            لورا
           </span>
           <span
             className="text-pink-300 font-bold"
@@ -88,7 +88,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
               display: "block",
             }}
           >
-            عندي شيء صغير إلك ❤️
+            عندي شي صغير الك ❤️
           </span>
         </h1>
       </div>
@@ -104,7 +104,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
             fontSize: "clamp(1rem, 4vw, 1.3rem)",
           }}
         >
-          بس لازم تمشي معي خطوة خطوة…
+          بس لازم تمشي معي خطوة خطوة
         </p>
       </div>
 
