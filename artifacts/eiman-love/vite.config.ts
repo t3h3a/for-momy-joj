@@ -5,7 +5,7 @@ import path from "path";
 const rawPort = process.env.PORT ?? "5173";
 const port = Number(rawPort);
 const basePath =
-  process.env.BASE_PATH ?? (process.env.NODE_ENV === "production" ? "/love-you-rama/" : "/");
+  process.env.BASE_PATH ?? (process.env.NODE_ENV === "production" ? "./" : "/");
 const apiProxyTarget = process.env.API_PROXY_TARGET ?? "http://localhost:3000";
 
 export default defineConfig({
