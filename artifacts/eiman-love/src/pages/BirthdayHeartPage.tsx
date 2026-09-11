@@ -130,7 +130,7 @@ export default function BirthdayHeartPage({ onReplay }: BirthdayHeartPageProps) 
             direction: "ltr",
           }}
         >
-          Happy Birthday Laura
+          Happy Birthday Sedra
         </h2>
 
         {showButton && (

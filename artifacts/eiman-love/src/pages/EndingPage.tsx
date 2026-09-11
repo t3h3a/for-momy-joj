@@ -78,7 +78,7 @@ export default function EndingPage({ onReplay }: EndingPageProps) {
               lineHeight: 1.2,
             }}
           >
-            لورا
+            سيدرا
           </h2>
           <p
             className="text-white font-bold"
@@ -124,7 +124,7 @@ export default function EndingPage({ onReplay }: EndingPageProps) {
               fontSize: "clamp(1rem, 4vw, 1.2rem)",
             }}
           >
-             ورحلتنا لسه طويلة بحبك يا لورا ❤️
+             ورحلتنا لسه طويلة بحبك يا سيدرا ❤️
 
           </p>
         </div>

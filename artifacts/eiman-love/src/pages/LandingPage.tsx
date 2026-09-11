@@ -78,7 +78,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
               textShadow: "0 0 40px rgba(255,105,180,0.5)",
             }}
           >
-            لورا
+            سيدرا
           </span>
           <span
             className="text-pink-300 font-bold"
