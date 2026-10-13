@@ -38,8 +38,8 @@ jobs:
       - name: Build site
         env:
           PORT: 4173
-          BASE_PATH: /Happy-birthday-my-precious-Laura/
-        run: pnpm --filter @workspace/eiman-love run build
+          BASE_PATH: /for-momy-joj/
+        run: pnpm --filter @workspace/jana-love run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

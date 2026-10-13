@@ -24,6 +24,12 @@ const getHeartPoint = (index: number, size: number) => {
   };
 };
 
+// Keep the photograph's clipping outline aligned with the animated particles.
+const heartOutline = Array.from({ length: particleCount }, (_, index) => {
+  const point = getHeartPoint(index, 1000);
+  return `${index === 0 ? "M" : "L"} ${500 + point.x} ${500 + point.y}`;
+}).join(" ") + " Z";
+
 export default function BirthdayHeartPage({ onReplay }: BirthdayHeartPageProps) {
   const [morphed, setMorphed] = useState(false);
   const [showButton, setShowButton] = useState(false);
@@ -102,6 +108,26 @@ export default function BirthdayHeartPage({ onReplay }: BirthdayHeartPageProps) 
             height: `${heartSize}px`,
           }}
         >
+          <svg
+            viewBox="0 0 1000 1000"
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${morphed ? "opacity-100" : "opacity-0"}`}
+            style={{ transitionDelay: morphed ? "1500ms" : "0ms" }}
+            role="img"
+            aria-label="صورة جنى داخل قلب"
+          >
+            <defs>
+              <clipPath id="jana-heart-clip">
+                <path d={heartOutline} />
+              </clipPath>
+            </defs>
+            <g clipPath="url(#jana-heart-clip)">
+              {/* Crop to the portrait within the original call screenshot. */}
+              <svg x="125" y="190" width="750" height="735" viewBox="355 218 185 185" preserveAspectRatio="xMidYMid slice">
+                <image href={`${import.meta.env.BASE_URL}jana-call.jpg`} width="900" height="1600" />
+              </svg>
+            </g>
+            <path d={heartOutline} fill="none" stroke="#ff8fc6" strokeWidth="5" />
+          </svg>
           {particles.map((particle) => (
             <span
               key={particle.id}
@@ -130,7 +156,7 @@ export default function BirthdayHeartPage({ onReplay }: BirthdayHeartPageProps) 
             direction: "ltr",
           }}
         >
-          Happy Birthday Sedra
+          I Love You Jana
         </h2>
 
         {showButton && (

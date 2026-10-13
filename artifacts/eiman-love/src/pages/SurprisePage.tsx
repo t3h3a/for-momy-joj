@@ -58,7 +58,7 @@ export default function SurprisePage({ onContinue }: SurprisePageProps) {
                     fontSize: "clamp(1.1rem, 5vw, 1.4rem)",
                   }}
                 >
-                  سيدرا
+                  جنى
                 </p>
                 <p
                   className="text-pink-200/90 mb-4"

@@ -5,7 +5,7 @@ import Ribbon from "@/components/Ribbon";
 const questions = [
   {
     id: 1,
-    text: "سيدرا تتذكري اول مرة حكينا فيها",
+    text: "جنى تتذكري اول مرة حكينا فيها",
     emoji: "💬",
     choices: [
       { emoji: "😅", text: "اكيد" },
@@ -64,24 +64,13 @@ const questions = [
     ],
   },
   {
-    id: 7,
-    text: "عيد ميلادك راح و انا ماكنت بعرفك وقتها صح ؟",
-    emoji: "🎂",
-    correctIndex: 0,
-    choices: [
-      { emoji: "😢", text: "ايوة" },
-      { emoji: "😔", text: "اه زعلانة منك" },
-      { emoji: "🥹", text: "اه بس عادي" },
-    ],
-  },
-  {
     id: 8,
-    text: "مين احلى سيدرا بالدنيا كلها",
+    text: "مين احلى جنى بالدنيا كلها",
     emoji: "💞",
     correctIndex: 2,
     choices: [
-      { emoji: "💖", text: "سيدرا طبعا" },
-      { emoji: "💕", text: "سيدورة طبعا" },
+      { emoji: "💖", text: "جنى طبعا" },
+      { emoji: "💕", text: "جنى الحلوة طبعا" },
       { emoji: "🫶", text: "كل الاجابات صح" },
     ],
   },
